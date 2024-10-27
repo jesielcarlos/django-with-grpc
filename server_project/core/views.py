@@ -1,4 +1,4 @@
-from core.models import CustomUsers
+from core.models import CustonUsers
 from django.http import JsonResponse
 from django.views import View
 from core.services import UserService
@@ -7,7 +7,7 @@ from django.utils.decorators import method_decorator
 
 
 class UsersViewSet(View):
-    queryset = CustomUsers.objects.all()
+    queryset = CustonUsers.objects.all()
     service = UserService()
 
     def get(self, request, user_id):
