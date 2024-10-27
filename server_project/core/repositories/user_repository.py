@@ -1,19 +1,19 @@
-from core.models import CustomUsers
+from core.models import CustonUsers
 
 
 class UserRepository:
     def get_user_by_id(self, user_id: int):
-        user = CustomUsers.objects.filter(user_id=user_id).first()
+        user = CustonUsers.objects.filter(user_id=user_id).first()
 
         return user
     
     def get_all_users(self):
-        users = CustomUsers.objects.filter(is_active=True)
+        users = CustonUsers.objects.filter(is_active=True)
 
         return users
 
     def create_user(self, name: str, email: str, password: str):
-        user = CustomUsers.objects.create(
+        user = CustonUsers.objects.create(
             username=name,
             email=email
         )
