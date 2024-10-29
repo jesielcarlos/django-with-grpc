@@ -8,6 +8,10 @@ class OrderRepository:
             return None
 
     def create(self, user_id: int, items: list):
-        order = Order(user_id=user_id, items=items)
+        order = Order.objects.create(
+            user_id=user_id,
+            items=items
+        )
+
         order.save()
         return order
