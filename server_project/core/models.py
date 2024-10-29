@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class CustonUsers(User):
+class CustomUsers(User):
     is_activated = models.BooleanField(
         default=True
     )
